@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+      <title>Задание 6</title>
+<body>
+  <div>Какой ответ получится у следующего выражения  <img width="84px"  height="30px" src="pr.jpg"> ?</div><br>
+  <div> <input type="radio" name="guitar" id="choice1"> 4</div><br>
+  <div> <input type="radio" name="guitar" id="choice2"> 10</div><br>
+  <div> <input type="radio" name="guitar" id="choice3"> 1</div><br>
+<button class="ok">Отправить результат</button><br><br>
+  Всего ответило - <input value="0" id="resultNum" style="width:30px;" readonly> чел.<br>
+  <input value="0" id="realResult1" style="width:30px;" readonly>% за  4
+  <input value="0" id="result1" type="hidden"><br>
+  <input value="0" id="realResult2" style="width:30px;" readonly>% за  -1/3
+  <input value="0" id="result2" type="hidden"><br>
+  <input value="0" id="realResult3" style="width:30px;" readonly>% за  5
+  <input value="0" id="result3" type="hidden"><br>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(".ok").click(function(){
+	var totalNum=0;
+		for (var i=1;i<=3;i++){
+			totalNum=totalNum+parseInt($('#result'+i).val());
+		}
+		for (var i=1;i<=3;i++){
+			var radioIsChecked = $('#choice'+i).prop('checked');
+			if (radioIsChecked == true){
+				$('#result'+i).val((parseInt($('#result'+i).val())+1).toString());
+				totalNum++;
+				$('#resultNum').val(totalNum.toString());
+			}
+		}
+		for (var i=1;i<=3;i++){
+			$('#realResult'+i).val(Math.round((parseInt($('#result'+i).val())/totalNum*100)).toString());
+		}
+        });
+</script>

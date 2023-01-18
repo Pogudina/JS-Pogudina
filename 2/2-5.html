@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+<head>
+      <title>Задание 5</title>
+<style>
+#moto { 
+	position: relative;
+}
+</style>
+</head>
+<body align="center">
+<h1>Переставьте Винни Пуха куда хочется!</h1>
+<div align="center" id="moto">
+    
+<img width="180px"  height="180px" src="https://pngicon.ru/file/uploads/vinni-pukh-v-png-256x256.png">
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$("#moto").mousedown(function() {
+			$(this).mousemove(function() {
+				moto.style.left = event.pageX - moto.offsetWidth / 2 + 'px';
+				moto.style.top = event.pageY - moto.offsetHeight / 2 + 'px';
+			});
+		}).mouseup(function() {
+				$(this).unbind('mousemove');
+			});
+</script>
+</body></html>
