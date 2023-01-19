@@ -1,0 +1,104 @@
+<head>
+  <title>Написать отзыв</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+</head>
+ <body>
+<div id="wrapper">
+  <header class="head">
+        <a style="float: right;background-color: #fff;text-decoration: none;  color: black; border: 2px solid black; padding: 10px;margin: 20px 10px;" href="index.html">Назад к питомцам</a>
+        <img style="float: center;" wigth="300px" height="300px" src="https://static.tildacdn.com/tild3565-3362-4531-b465-396433313661/Logo-green1.png">
+        <h1  style="float: center;">Приют для животных</h1>
+	</header>
+  <br />
+  <h2 align="center" style="text-align:center;background-color: #fff; color: black; border: 2px solid black; padding: 10px;margin: 20px 10px;">Оставьте отзыв</h2>
+  <div id="content">
+      <div class="recent">
+        <div id="comments">
+          <div id="respond">
+            <p>Имя * <input type="text" name="author" id="author" value="" size="22" tabindex="1" /><label for="author"></label></p>
+            <p>Отзыв*<textarea name="comment" id="comment" cols="60" rows="10" tabindex="4"></textarea></p>
+            <p>email*<input type="text" name="email" id="email" value="" size="22" tabindex="1" /><label for="email"></label></p>
+            <p><button id="confirm">Отправить</button></p>
+          </div>
+        </div>
+        <div id="comments">
+          <input id="msgid" type="hidden">
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#msgid').val(0);
+    /* $('#try').on('click',); */
+    load();
+
+    function load() {
+      $.ajax({
+        type: 'POST',
+        url: 'loadMessageData.php',
+        dataType: "json",
+        /*data:{tek:tek, kol:kol},*/
+        success: function (data) {
+          if (data.length > parseInt($('#msgid').val())) {
+            for (var i = parseInt($('#msgid').val()); i < data.length; i++) {
+              $('#comments').append('<div class="msg">Имя: ' + data[i].name +'</div>Отзыв:' + data[i].msg +
+                '<p  align="right">' + data[i].email +'<p  align="right">' + data[i].datepub + '<br></div><hr>');
+            }
+            $('#msgid').val(data.length);
+          }
+        }
+      });
+    };
+
+    $('#confirm').on('click', function () {
+      var checker = true;
+      var name = $('#author').val();
+      var msg = $('#comment').val();
+      var email = $('#email').val();
+      Data = new Date();
+        Year = Data.getFullYear();
+        Month = Data.getMonth()+1;
+        Day = Data.getDate();
+        Hour = Data.getHours();
+        Minutes = Data.getMinutes();
+        Seconds = Data.getSeconds();
+      var date = Year + "-0" + Month + "-" + Day + " " + + Hour + ":" + Minutes + ":" + Seconds;
+      console.log(date);
+       console.log(Month);
+      if ($('#author').val() == '' || $('#author').val().length < 4) {
+        checker = false;
+      }
+      if ($('#comment').val() == '' || $('#comment').val().length < 5) {
+        checker = false;
+      }
+      if (checker == true) {
+        $.ajax({
+          type: 'POST',
+          url: 'saveMessage.php',
+          data: {
+            name: name,
+            msg: msg,
+            email: email,
+            datepub: date,
+          },
+          success: function () {
+            load()
+            $('#author').val('')
+            $('#comment').val('')
+            $('#email').val('')
+            alert("Отзыв добавлен!");
+          }
+
+        });
+      } else {
+        alert("Отзыв не отправлен, проверьте правильность ввода полей!");
+      }
+    });
+  });
+</script>
