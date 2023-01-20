@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script> 
+<style>
+    .btn{
+	height: 50px;
+	background-color: #fff;
+	line-height: 50px;
+	border: 1.5px solid #A5A5A5;
+	width: 100%;
+	text-align: center;
+	border-radius: 5px;
+}
+body{
+		font-family: "Trebuchet MS", sans-serif;
+	}
+   #game{
+      position: relative;
+      font: 1em Arial,sans-serif;
+  	  vertical-align: middle;
+    }
+    #game .game{
+     box-shadow: 0 0 3px #999;
+     padding: 10px 40px 150px 40px;
+     background: #fff;
+     border-radius: 5px;
+     float: center;
+    }
+   #game .win,#game .lost,#game .draw{
+     position: absolute;
+     width: 90%;
+     height: 120px;
+     top:0;
+     left:0;
+     right:0;
+     bottom:0;
+     margin: auto;
+     background-color: rgba(250,250,250,.6);
+     box-shadow: 0 0 3px #999;
+     border-radius: 2px;
+     display: none
+    }
+
+    #game .win h2,#game .lost h2,#game .draw h2{
+     text-align: center;
+     color: #777;
+    }
+#game .intro{
+     text-align: center;
+    }
+    #game .intro a.next{
+     font: 0.8em Arial,sans-serif;
+     text-decoration: none;
+     color: #eee;
+     text-shadow: 1px 1px 1px #000;
+     background-color: #60B355;
+     border-radius: 2px;
+     padding: 4px 10px;
+     margin-bottom: 10px;
+    }
+     #game a.close{
+     position: absolute;
+     right: 2px;
+     top: 2px;
+     padding: 2px 8px;	 
+     background-color: #eee;
+     text-shadow: 0px 0px 1px #fff;
+     font: .8em Arial,sans-serif;
+     text-decoration: none;
+    }
+    #game a.close:hover{
+     background-color: #dEdEdE;
+     text-shadow: 0px 0px 2px #fff;
+    }  
+</style>
+</head>
+<body>
+    <div id="game">
+        <div class="game">
+            <h2>3. Бросание кубиков<br></h2><h3>Пользователь-игрок нажимает кнопку. Компьютер выводит результат «бросания» кубиков.<p> Игра до 6-ти побед.<p>  На интерфейсе имеется счет, а также настраиваемое кол-во кубиков.</h3>
+	<p><select id="kol">
+	<option value="1">1 кубик</option>
+	<option value="2" selected="selected">2 кубика</option>
+	<option value="3">3 кубика</option>
+	<option value="4">4 кубика</option>
+	<option value="5">5 кубика</option>
+   </select></p>
+   <p><button id="confirm" class="btn">Начать игру</button></p>
+
+	    <table align="center" width="100%" cellspacing="1" cellpadding="1" border="1">
+            <tr id="my1">
+            </tr>
+            <tr id="comp1">
+            </tr>
+	    </table><br>
+	    <table align="center" width="100%" cellspacing="1" cellpadding="1" border="1">
+            <tr>
+               <th>Мои победы</th>
+               <th>Победы компьютера</th>
+            </tr>
+            <tr>
+                <td><div id="wer"/>0</td>
+                <td><div id="asd"/>0</td>
+            </tr>
+            
+	    </table>
+	</div>
+	 
+    </div>
+</body>
+</html>
+
+
+
