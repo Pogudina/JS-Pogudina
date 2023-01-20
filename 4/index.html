@@ -1,0 +1,388 @@
+<html lang="ru">
+<head>    
+    <meta charset="utf-8" />
+<title>
+Выбери персонажа
+</title>
+</head>
+<style>
+body{
+	background-image: url("tes.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.FirstForm{
+	width: 80%;
+	margin: auto auto;
+	position: relative;
+}
+@media (max-width:1000px){
+	.FirstForm{
+		width: 90%;
+		margin: 3% 4% 5%;
+		position: relative;
+	}
+}
+.SecondForm{
+	width: 50%;
+	margin: 1% 25% 5%;
+	position: sticky;
+	bottom: 0px;
+}
+.poster{
+	width:28%;
+	float:left;
+	height:300;
+	overflow: visible;
+}
+.imag{
+	width:72%;
+	float:right;
+}
+.about{
+	display: inline-block;
+	width:72%;
+}
+.bt{
+	position: relative;
+	margin: 0px 50px;
+	height: 50px;
+    width: 180;
+}
+.pr{
+	position: relative;
+	margin: 10px 80px;
+}
+h2{
+	margin: 0;
+	position:relative;
+	top:-15;
+}
+.select{
+	margin:10 50 30;
+}
+label {
+	font-size:14;
+}
+input {
+	font-size:17;
+}
+span {
+	font-size:17;
+}
+jca1 {
+	float:left;
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/jcarousel-0.3.9/dist/jquery.jcarousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jcarousel.css" /> 
+<link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="jquery-ui-1.13.1.custom/jquery-ui.js"></script> 
+<script type="text/javascript" src="datepicker-ru.js"></script><!--Локализация календаря-->
+<body>
+<!--Первая форма-->
+<div class="FirstForm" id="tabs">
+	<!--Верхние вкладки-->
+	<ul>
+		<li><a id="a1" href="#tabs-1">Ковенант Даггерфолла</a></li>
+		<li><a id="a2" href="#tabs-2">Доминион Альдмери</a></li>
+		<li><a id="a3" href="#tabs-3">Эбонхартский пакт</a></li>
+    </ul>
+	<!--Первая вкладка-->
+  <div id="tabs-1" style="padding: 2em 0.1em;" aria-hidden="false">
+	<div class="poster">
+		<img  class="pr" src="https://wiki.tesonline.org/images/7/78/ON-banner-Daggerfall_Covenant.png">
+		<input type="button" class="bt" id="bt1" value="Создать">
+	</div>
+	<!--Images-->
+	<div class="imag">
+	<!--Title-->
+	<h2>Расы принадлежащие альянсу "Ковенант Даггерфолла"</h2>
+	<!-- Wrapper -->
+	<div class="jcarousel-wrapper" id="jw1">
+		<!-- Carousel -->
+		<div class="jcarousel" id="jca1">
+		<ul>
+			<li><img width="auto" height="204px" src="https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/emeric.png"></li>
+			<li><img width="138px" height="204px" src="https://i.pinimg.com/originals/fa/48/a7/fa48a72370af90fb3ed049b1c8f22ac7.png"></a></li>
+			<li><img width="auto" height="204px" src="https://www.tesonline.ru/upl/4srv4JWC.jpg"></li>
+		</ul>
+		</div>
+	</div>	
+	<!-- Controls -->
+	<p class="jcarousel-pagination"></p>	
+	</div>
+	<!--Text-->
+	<div>
+		<p class="about">Даггерфолльский Ковенант — традиционный альянс, созданный в Вэйресте, в 2Э 567, под знамёнами верховного короля Эмерика. Сам по себе Ковенант представляет собой целый набор торговых договоров и соглашений о взаимозащите, таким образом являясь самым «свободным» альянсом своего времени. Своей основной целью Ковенант объявил реставрацию Второй империи. Также, Ковенант использует свою военную мощь для обеспечения безопасности торговых путей.
+<br><h1> Расы: </h1>
+<br> - Бретонцы (1) — раса людей, проживающих в провинции Хай Рок. Распространено мнение, что они являются полуэльфами, однако это является заблуждением — в нынешних бретонцах столь мало эльфийской крови, что они считаются народом людей (хоть и с эльфийскими корнями).
+<br> - Орки (2) — являются крупнейшей расой Тамриэля, не имеющей собственного государства. Их ещё называют орсимерами или отверженным народом, что подчеркивает их положение. Согласно легендам они были сторонниками Тринимака, которого Боэтия проглотила и низвергла в виде Малаката — принца Обливиона, чьей сферой является покровительство изгнанников и презираемых. Альдмеры, служившие Тринимаку, также преобразились: их кожа позеленела, а из челюстей стали торчать острые клыки. Орки заселили почти весь Тамриэль, но больше всего их проживает в горах Хаммерфелла и Хай-Рока, часть нашла себе приют в тени лесов Валенвуда.
+<br> - Редгарды  (3) — составляют основу населения Хаммерфелла — сурового края на западе Тамриэля. Эта раса не является автохтонной, а сформировалась из прибывших в начале Первой эры йокуданцев-переселенцев, захвативших тогда ещё Воленфелл. Именно это объясняет отсутствие родства со всеми иными людскими расами континента. В ходе завоевания новой родины йокуданские племена столкнулись со многими иными народами (гоблинами, орками, недийцами, альтмерами), но всех их уничтожили или изгнали. Особо рьяно Ра Гада истребляла эльфов, помня о древнем конфликте с йокумерами на старой родине.
+</p>
+	</div>
+  </div>
+  <!--Вторая вкладка-->
+  <div id="tabs-2" style="padding: 2em 0.1em;" >
+	<div class="poster">
+		<img  class="pr" src="https://wiki.tesonline.org/images/6/66/ON-banner-Aldmeri_Dominion.png">
+		<input type="button" class="bt" id="bt2" value="Создать">
+	</div>
+    <!--Images-->
+	<div class="imag">
+	<!--Title-->
+	<h2>Расы принадлежащие альянсу "Доминион Альдмери"</h2>
+	<!-- Wrapper -->
+	<div class="jcarousel-wrapper" id="jw2">
+		<!-- Carousel -->
+		<div class="jcarousel" id="jca2">
+		<ul>
+			<li><img width="auto" height="204px" src="https://avatars.dzeninfra.ru/get-zen_doc/3731867/pub_5f0c8aaa7c0e3477c81ed0cc_5f0ca9a3b215121e394ddfec/scale_1200"></li>
+			<li><img width="auto" height="204px" src="https://i.playground.ru/p/wMQthu-lLUxfhAKlC3AxpQ.jpeg"></li>
+			<li><img width="auto" height="204px" src="https://cs8.pikabu.ru/post_img/big/2017/12/21/4/1513829699134943017.jpg"></li>
+		</ul>
+		</div>
+	</div>	
+	<!-- Controls -->
+	<p class="jcarousel-pagination"></p>	
+	</div>
+	<!--Text-->
+	<div>
+		<p class="about">Альдмерский Доминион — самая молодая из фракций Междуцарствия, был образован альтмерами как ответ на агрессивную политику узурпатора-Тарна: вторжение войск последнего в Валенвуд повлекло за собой призыв босмеров о помощи к своим давним союзникам — альтмерам — обусловленный некими древними договорами. Последние, в свою очередь, воззвав всё к тем же договорам, объявили о создании Альдмерского Доминиона для всеобщей безопасности и стабильности, прогнав захватчиков из лесов Валенвуда. Тем не менее, среди босмеров нашлось немало противников Доминиона, многие из них вплоть до 2Э 582 года не подчинялись Талмору, а контроль над Гнездом Кенарти был установлен лишь после вооружённого конфликта между альтмерами и маормерами.
+<br> - Альтмеры (1) они же салачи, которые сами себя называют «Культурным народом», составляют подавляющее большинство населения на островах Саммерсет. Высокие с золотой кожей, они считают себя наиболее развитым народом Тамриэля. На континенте, а прежде всего в регионах, населённых людскими расами, известны как «Высокие эльфы», где первое слово несёт в себе большей частью смысл не роста, а гордыни и высокомерия этой расы. Всем своим поведением они стремятся подчеркнуть это, что в глазах младших рас не всегда создаёт альтмерам положительный образ.
+<br> - Каджиты  (2) уроженцы жаркого Эльсвейра, в котором есть джунгли, саванны и даже пустыни, являются одной из самых необычных рас Тамриэля. Их самоназвание переводится с языка Та'агра как «житель пустыни». Другие расы часто презрительно называют их котами, что является обидным прозвищем для каджита. Особую роль в жизни каджитов играют луны, являющиеся неотъемлемым атрибутом их культуры, и лунный сахар, выращивание которого — чуть ли не самое главное занятие фермеров Эльсвейра.
+<br> - Босмеры (3) являются крупнейшим народом Валенвуда — края на юго-западе Тамриэля. Сами себя часто называют «народ Древесного сока». Низкорослые и зачастую смуглокожие, босмеры являются одними из лучших разведчиков и охотников Тамриэля. На территориях бывшей Второй Империи их часто называют лесными эльфами за особую природу их родины, покрытой густыми лесами. В отличие от своих сородичей альтмеров, босмеры менее склонны к церемониям, жёстким традициям и правилам, предпочитая жить в гармонии с природой. Впрочем, Зелёный Пакт для них является нерушимым фундаментом жизни духовной и мирской, так как он позволяет этой расе быть частью Валенвуда. Отступников от Пакта жестоко наказывают, причём чаще всего это делает сама природа.
+</p>
+	</div>
+  </div>
+  <!--Третья вкладка-->
+  <div id="tabs-3" style="padding: 2em 0.1em;" >
+	<div class="poster">
+		<img class="pr" src="https://wiki.tesonline.org/images/4/4a/ON-banner-Ebonheart_pact.png">
+		<input type="button" class="bt" id="bt3" value="Создать">
+	</div>
+    <!--Images-->
+	<div class="imag">
+	<!--Title-->
+	<h2>Расы принадлежащие альянсу "Эбонхартский Пакт"</h2>
+	<!-- Wrapper -->
+	<div class="jcarousel-wrapper" id="jw3">
+		<!-- Carousel -->
+		<div class="jcarousel" id="jca3">
+		<ul>
+			<li><img width="auto" height="204px" src="https://avatars.dzeninfra.ru/get-zen_doc/1703615/pub_5dd27cc0e5968126aa191cdf_5dd27f84452197271c9bf954/scale_1200"></li>
+			<li><img width="auto" height="204px" src="https://cs7.pikabu.ru/post_img/2018/09/21/0/153747811013799623.png"></li>
+			<li><img width="auto" height="204px" src="https://sun9-13.userapi.com/impf/c836122/v836122541/c7e4/Ch1TKyGtCFE.jpg?size=807x504&quality=96&sign=34dd3cabde0f9c79f10ef8cccf8ab81e&type=album"></li>
+		</ul>
+		</div>
+	</div>	
+	<!-- Controls -->
+	<p class="jcarousel-pagination"></p>	
+	</div>
+	<!--Text-->
+	<div>
+		<p class="about">Эбонхартский Пакт — самый необычный и хрупкий из всех альянсов Тамриэля. Он возник под давлением обстоятельств непреодолимой силы и объединил в своём составе три расы, чьи взаимные претензии друг к другу имеют глубокие исторические корни. Тем не менее, древние распри оказались куда менее сильны, чем та враждебность, которую каждый из членов альянса питает к остальным расам, не входящим в состав Пакта. Норды, данмеры и аргониане по-своему уважают друг друга, как это умеют только старые враги.
+<br> - Норды (1) Норды составляют подавляющее большинство среди народов, населяющих Скайрим. Они являются потомками переселенцев, прибывших с континента Атмора, расположенного на далёком севере. По легендам первыми колонистами были Исграмор и его дружина, основавшие город Саартал, но ряд исследователей ставит легенду под сомнение.
+<br> - Данмеры  (2) Это уроженцы далёкого Морровинда — причудливого края, усеянного вулканами и поросшего лесами из гигантских грибов. Данмеры некогда были каймерами, но после событий на Красной горе, что произошли в начале Первой эры и привели к исчезновению расы двемеров и гибели Неревара Индорила, Азура прокляла их.
+<br> - Аргониане  (3) Обитатели болот юго-востока Тамриэля, эти удивительные разумные существа называют себя Саксхлил на своём языке Джель или просто «Народ корня», а на всём остальном континенте их часто называют ящерицами или народ ящеров, что, как правило, имеет негативный уничижительный смысл.
+</p>
+	</div>
+  </div>
+</div>
+<!--Вторая форма-->
+<div class="SecondForm">
+	<div id="dialog" title="Создание персонажа">
+		<p></p>
+		<label for ="init" style="margin:0 5 10 20;">Имя:</label>
+		<input type="text" size="30" id="init"><br><br>
+		<label for ="kol" style="margin:0 5 10 20;">Количество начальных навыков:</label>
+		<input type="number" value="2" step="1" min="2" max="5" id="kol">
+		<div id="slider" style="margin:10 50 30;"></div>
+		<label for ="data" style="margin:0 5 10 20;">Дата создания:</label>
+		<input id="data" readonly><br><br>
+		<label for ="select" style="margin:0 5 10 20;">Альянс:</label>
+		<select id="select" >
+			<option>Ковенант Даггерфолла</option>
+			<option>Доминион Альдмери</option>
+			<option>Эбонхартский пакт</option>
+		</select>
+		<br><br>
+		<label for ="select2" style="margin:0 5 10 20;">Класс:</label>
+		<select id="select2" >
+			<option>Рыцарь-дракон Dragonknight</option>
+			<option>Чародей Sorcerer</option>
+			<option>Клинок ночи Nightblade</option>
+			<option>Храмовник  Templar</option>
+			<option>Страж Warden</option>
+		</select>
+		<br><label for ="search" style="margin:0 5 10 20;">Краткое описание:</label>
+		<textarea style="margin:20 0 0 0;" id="search"> </textarea>
+		<br>
+		<input type="button" id="send" value="Отправить" style="position:relative;width: 22%;	margin: 3% 40% 2%;height:30;">
+	</div>
+	<div id="confirm" title="Подтверждение">
+		<p>Подтвердите создание</p>
+	</div>
+	<div id="alert" title="Персонаж отправлен модераторам">
+		<p>Спасибо за заполнение "анкеты".</p>
+	</div>
+</div>
+</body>
+<script>
+$(window).load(function(){
+	(function($){ 
+		$('.jcarousel').on('jcarousel:create', function(event, carousel) { // Установка размеров блока при создании jcarousel
+			var jwid = this.parentElement.id;
+			let clH = this.clientHeight;
+			let clW = this.clientWidth;
+			$("#"+jwid).animate({height:maxHeightOfImage(parseInt(jwid.substring(2,3))),width:maxWidthOfImage(parseInt(jwid.substring(2,3)))},0);
+			setTimeout(function() {
+				$('#p'+jwid).animate({top:clH},{duration:0});
+			},0);
+			if (($(".poster img:eq("+(jwid.substring(2,3)-1)+")")[0].clientHeight + 50)<(clH+$(".about:eq("+(jwid.substring(2,3)-1)+")")[0].clientHeight)){
+				$(".poster:eq("+(jwid.substring(2,3)-1)+")").animate({height:clH+$(".about:eq("+(jwid.substring(2,3)-1)+")")[0].clientHeight+50},400);}
+			else{$(".poster:eq("+(jwid.substring(2,3)-1)+")").animate({height:($(".poster img:eq("+(jwid.substring(2,3)-1)+")")[0].clientHeight + 100)},400);}
+		});
+		$('.jcarousel').on('jcarousel:visiblein', 'li', function(event, carousel) { // Установка размеров блока, когда изображение становится видимым
+			var hid = this.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute("aria-hidden");
+			var jwid = this.parentElement.parentElement.parentElement.id;
+			if ((hid!="true") && (!!hid)){	// Если атрибут вкладки "видимый" и этот атрибут существует
+				let clH = this.clientHeight;
+				let clW = this.clientWidth;
+				$("#"+jwid).animate({height:clH,width:clW},{duration:400, start:function(){
+					$('#p'+jwid).animate({top:clH},{duration:400, start:function(){
+						if (($(".poster img:eq("+(jwid.substring(2,3)-1)+")")[0].clientHeight + 50)<(clH+$(".about:eq("+(jwid.substring(2,3)-1)+")")[0].clientHeight)){
+						$(".poster:eq("+(jwid.substring(2,3)-1)+")").animate({height:clH+$(".about:eq("+(jwid.substring(2,3)-1)+")")[0].clientHeight},400);}
+					}});}});
+			}
+		});
+		$('.jcarousel').jcarousel({wrap: 'circular'}); // Карусель будет циклична
+		$('.jcarousel-pagination').jcarouselPagination({ // Создание кнопок для выбора изображения
+			item: function itemfun(page, carouselItems) {
+				$('.jcarousel-pagination')[this['_carousel'][0].parentElement.id.substring(2,3)-1].id= 'p'+this['_carousel'][0].parentElement.id;
+				let pjwid = $('.jcarousel-pagination')[this['_carousel'][0].parentElement.id.substring(2,3)-1].id;
+				$('#'+pjwid).animate({top:$(".jcarousel-wrapper:eq("+(pjwid.substring(3,4)-1)+")").position()['top']},0);
+				if (page==1){return '<a href="#' +this['_carousel'][0].parentElement.id+page + '"class="active">' + page + '</a>';} // Установка кнопки "нажатой", если изображение - первое
+				return '<a href="#' +this['_carousel'][0].parentElement.id+page +'">' + page + '</a>';
+		  }
+		});
+		$('.jcarousel').jcarouselAutoscroll({ // Настройки автоскролла изображений
+		  interval: 3000,
+		  target: '+=1',
+		  autostart: false,
+		  auto: 2
+		});
+		$('#jca1').jcarouselAutoscroll('start'); // Запуск автоскролла на первой вкладке
+		$('.jcarousel-pagination').on('jcarouselpagination:active', 'a', function() { // При становлении кнопки "нажатой"
+			let elem = $(this)[0].parentElement.parentElement.parentElement;
+			if (elem.getAttribute("aria-hidden")=="false"){
+				$(this).addClass('active');
+			}
+		});
+		$('.jcarousel-pagination').on('jcarouselpagination:inactive', 'a', function() { // При становлении кнопки "отжатой"
+			let elem = $(this)[0].parentElement.parentElement.parentElement;
+			if (elem.getAttribute("aria-hidden")=="false"){
+				$(this).removeClass('active');
+			}
+		});
+	}); 
+	$(function(){ // Отображение панели вкладок
+		$("#tabs").tabs();
+	});
+	function maxHeightOfImage(id){
+		let h = 0;
+		let im = $("div #jca"+id+" ul li img");
+		for (let i = 0; i<im.length;i++){ if (im[i].clientHeight>h){h = im[i].clientHeight;}}
+		$(".jcarousel-pagination")[id-1].style.margin = 0;
+		$(".jcarousel-pagination")[id-1].style.left = $(".jcarousel-wrapper").position()['left']-30;
+		return h;
+	}
+	function maxWidthOfImage(id){
+		let w = 0;
+		let im = $("div #jca"+id+" ul li img");
+		for (let i = 0; i<im.length;i++){ if (im[i].clientWidth>w){w = im[i].clientWidth;}}
+		return w;
+	}
+});
+$(function(){
+	var prom = 1;
+	
+	$('#dialog').dialog({
+		autoOpen: false,
+		minWidth: 500,
+		minHeight: 300,
+		close: function( event, ui ) {clear();},
+		hide: { effect: "fade", duration: 200 },
+		show: { effect: "fade", duration: 200 } 
+	});
+	$('#confirm').dialog({
+		autoOpen: false,
+		hide: { effect: "fade", duration: 200 },
+		show: { effect: "fade", duration: 200 },
+		buttons: [{text: "Подтверждаю", click: function() {$('#alert').dialog('open');}},
+                  {text: "Назад", click: function() {$(this).dialog("close")}}]		
+	});
+	$('#alert').dialog({
+		autoOpen: false,
+		hide: { effect: "fade", duration: 200 },
+		show: { effect: "fade", duration: 200 },
+		buttons: [{text: "Ок", click: function() {$('#alert').dialog('close');$('#confirm').dialog('close');$('#dialog').dialog('close');}}]
+	});
+	$(".bt").click(function(){ // Нажатие на кнопку
+		for (let i = 1;i<=3;i++){
+			let ahid = $("#tabs-"+i)[0].getAttribute("aria-hidden");
+			if ((ahid!="true") && (!!ahid)){	// Если атрибут вкладки "видимый" и этот атрибут существует
+				$("#sendEl").text($("h2:eq("+(i-1)+")").text());
+			
+
+			}
+		}
+		$('#dialog').dialog('open');
+	});
+
+	$('#slider').slider({
+		animate: 'fast',
+		min: 2,
+		max: 5,
+		value: 2,
+		slide: function( event, ui ) {
+			$('#kol').val(ui['value']);
+		}
+	});
+	$("#kol").change(function(){
+		if ($(this).val()>5){$(this).val(5)}
+		if ($(this).val()<2){$(this).val(2)}
+		$('#slider').slider('value',$(this).val());
+	});
+	$("#data").datepicker({
+		minDate: 1
+	});
+	$("#data").datepicker($.datepicker.regional["ru"]);
+	
+	
+	$("#search").focusin(function(){
+		$( "#search" ).autocomplete({
+			source: availableTags, minLength: 3
+		});
+	});
+
+	$(".SecondForm div a").tooltip();
+	$('#send').click(function(){
+		// Проверка введенных данных
+		let ok = true;
+		if ($("#init").val().length<2){ok = false;$("#init").effect( "shake",{distance:7, times:1},200);}
+		if ($("#kol").val().length<1 || $("#kol").val()=="0"){ok = false;$("#kol").effect( "shake",{distance:7, times:1},200);}
+		if ($("#data").val().length<10){ok = false;$("#data").effect( "shake",{distance:7, times:1},200);}
+		if ($("#search").val().length<5){ok = false;$("#search").effect( "shake",{distance:7, times:1},200);}
+		if (ok){$('#confirm').dialog('open');}
+	});
+	function clear(){
+		$("input:not(.bt, #send)").val('');
+		$("#kol").val('2');
+		$('#slider').slider('value',2);
+	}
+});
+</script>
+</html>
